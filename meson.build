@@ -204,6 +204,7 @@ if host_machine.system() == 'windows'
 else
   files += 'src/utils/filesystem.posix.cc'
 endif
+deps += [ dependency('boost', modules : ['thread', 'system' ], static : true) ]
 
 #############################################################################
 ## BACKENDS
